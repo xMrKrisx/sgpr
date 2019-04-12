@@ -12,15 +12,15 @@
 
         <p>Naam: <input type="text" name='name' id="name" required></p>
         <p>Week nummer: <input type="week" name="week" id="week" required></p>
-        <p>Project: <select type="text" name="project" id="project">
+        <p>Project: <select type="text" name="project" id="project" required>
                
             @foreach($projects as $project)
-                <option>{{ $project }}</option>
+                <option>{{ $project }}</option> <!-- De projecten uit de array -->
             @endforeach
         </select></p>
         <p>Werkgever: <select type="text" name="company" id="company">
             @foreach($companys as $company) 
-                <option> {{ $company }}</option>
+                <option> {{ $company }}</option> <!-- De opdrachtgevers uit de array --> 
             @endforeach
         </select></p>
         <p>Beschrijving: <textarea name="description" id="description" cols="30" rows="5"></textarea></p>
